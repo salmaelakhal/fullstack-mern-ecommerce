@@ -7,6 +7,13 @@ import CartDrawer from '../Layout/CartDrawer';
 
 
 function Navbar() {
+
+    const [drawerOpen, setDrawerOpen] = React.useState(false);
+
+    const toggleCartDrawer = () => {
+        setDrawerOpen(!drawerOpen);
+    }
+
     return (
         <>
             <nav className='container mx-auto flex items-center justify-between py-4 px-6'>
@@ -36,7 +43,7 @@ function Navbar() {
                         <Link to="/profile" className='hover:text-black'>
                             <HiOutlineUser className='h-6 w-6 text-gray-700' />
                     </Link> 
-                    <button className=' relative hover:text-black'>
+                    <button onClick={toggleCartDrawer} className=' relative hover:text-black'>
                         <HiOutlineShoppingBag className=' h-6 w-6 text-gray-700' /> 
                         <span className='absolute -top-1 bg-gradient-to-r from-blue-600 to-violet-600 text-white text-xs rounded-full px-2 py-0.5'>4</span>
                     </button>
@@ -52,7 +59,7 @@ function Navbar() {
                 </div>
 
             </nav>
-            <CartDrawer />
+            <CartDrawer drawerOpen={drawerOpen} toggleCartDrawer={toggleCartDrawer} />
 
       </>  
   )
