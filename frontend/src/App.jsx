@@ -1,11 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import UserLayout from './components/Layout/UserLayout';
 
 function App() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="underline text-4xl font-bold">Welcome to the App</h1>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<UserLayout />} />
+        {/* Add more routes as needed */}
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
