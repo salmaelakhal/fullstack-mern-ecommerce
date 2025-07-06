@@ -7,6 +7,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<UserLayout />} />
+          
         {/* Add more routes as needed */}
       </Routes>
     </BrowserRouter>
