@@ -4,11 +4,17 @@ import { HiOutlineShoppingBag, HiOutlineUser } from 'react-icons/hi';
 import { HiBars3BottomRight } from "react-icons/hi2";
 import SearchBar from './SearchBar';
 import CartDrawer from '../Layout/CartDrawer';
+import { IoMdClose } from 'react-icons/io';
 
 
 function Navbar() {
 
     const [drawerOpen, setDrawerOpen] = React.useState(false);
+    const [navDrawerOpen, setNavDrawerOpen] = React.useState(false);
+
+    const toggleNavDrawer = () => {
+        setNavDrawerOpen(!navDrawerOpen);
+    }
 
     const toggleCartDrawer = () => {
         setDrawerOpen(!drawerOpen);
@@ -42,7 +48,8 @@ function Navbar() {
                     <div className="flex items-center space-x-4">
                         <Link to="/profile" className='hover:text-black'>
                             <HiOutlineUser className='h-6 w-6 text-gray-700' />
-                    </Link> 
+                        </Link> 
+                    {/* shopping bang icon */}
                     <button onClick={toggleCartDrawer} className=' relative hover:text-black'>
                         <HiOutlineShoppingBag className=' h-6 w-6 text-gray-700' /> 
                         <span className='absolute -top-1 bg-gradient-to-r from-blue-600 to-violet-600 text-white text-xs rounded-full px-2 py-0.5'>4</span>
@@ -53,13 +60,22 @@ function Navbar() {
                         <SearchBar />
                     </div>
                     
-                    <button className="hover:hidden">
+                    <button onClick={toggleNavDrawer} className="md:hidden">
                         <HiBars3BottomRight  className='h-6 w-6 text-gray-700' />
                     </button>
                 </div>
 
             </nav>
             <CartDrawer drawerOpen={drawerOpen} toggleCartDrawer={toggleCartDrawer} />
+
+            {/* Mobile Navigation */}
+            <div className={`fixed top-0 left-0 w-3/4 sm:w-1/2 md:w-1/3 h-full bg-white shadow-lg transform transistion-transform duration-300 z-50 ${navDrawerOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div class="flew justify-end p-4">
+                    <button>
+                        <IoMdClose className='h-6 w-6 text-gray-600'></IoMdClose>
+                    </button>
+                </div>
+            </div>
 
       </>  
   )
