@@ -5,7 +5,7 @@ import { HiBars3BottomRight } from "react-icons/hi2";
 import SearchBar from './SearchBar';
 import CartDrawer from '../Layout/CartDrawer';
 import { IoMdClose } from 'react-icons/io';
-import logo from "../../assets/Preview.png"
+// import logo from "../../assets/Preview.png"
 
 function Navbar() {
 
