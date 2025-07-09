@@ -5,7 +5,7 @@ import { HiBars3BottomRight } from "react-icons/hi2";
 import SearchBar from './SearchBar';
 import CartDrawer from '../Layout/CartDrawer';
 import { IoMdClose } from 'react-icons/io';
-
+import logo from "../../assets/Preview.png"
 
 function Navbar() {
 
@@ -28,7 +28,8 @@ function Navbar() {
             <nav className='container mx-auto flex items-center justify-between py-4 px-6'>
                 <div>
                     <Link to='/' className='text-2xl font-medium'>
-                        LeadiesShop
+                        MERNify
+                        {/* <img src={logo} alt="hh" className='w-18 h-18' /> */}
                     </Link>
                 </div>
                 <div className='hidden md:flex space-x-6'>

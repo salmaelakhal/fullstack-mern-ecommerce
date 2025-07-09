@@ -10,7 +10,9 @@ export default function UserLayout() {
       <Header />
 
       {/* main content  */}
-    
+      <main>
+        <Outlet />
+    </main>
 
       {/* Footer */}
       <Footer />
