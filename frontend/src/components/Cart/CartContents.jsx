@@ -35,7 +35,7 @@ function CartContents() {
                              size: {product.size} | color: {product.color}
                          </p>
                          <div className='flex items-center mt-2'>
-                             <butto className="border rounded px-2 py-1 text-xl font-medium">-</butto>
+                             <button className="border rounded px-2 py-1 text-xl font-medium">-</button>
                              <span className='mx-2'>{ product.quantity}</span>
                              <button className="border rounded px-2 py-1 text-xl font-medium">+</button>
                              

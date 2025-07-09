@@ -16,6 +16,9 @@ function Navbar() {
         setNavDrawerOpen(!navDrawerOpen);
     }
 
+    /**
+     * Toggle the open state of the cart drawer
+     */
     const toggleCartDrawer = () => {
         setDrawerOpen(!drawerOpen);
     }
@@ -70,7 +73,7 @@ function Navbar() {
 
             {/* Mobile Navigation */}
             <div className={`fixed top-0 left-0 w-3/4 sm:w-1/2 md:w-1/3 h-full bg-white shadow-lg transform transistion-transform duration-300 z-50 ${navDrawerOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-                <div class="flew justify-end p-4">
+                <div className="flew justify-end p-4">
                     <button onClick={toggleNavDrawer}>
                         <IoMdClose className='h-6 w-6 text-gray-600'></IoMdClose>
                     </button>
