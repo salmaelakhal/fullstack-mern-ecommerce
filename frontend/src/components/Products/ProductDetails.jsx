@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {toast} from 'sonner';
+import ProductGrid from './ProductGrid';
 
 
 
@@ -45,7 +46,7 @@ function ProductDetails() {
         if (selectedProduct.images.length > 0) {
             setMainImage(selectedProduct.images[0].url);
         }
-}, [selectedProduct]);
+    }, [selectedProduct]);
     
     
     const handleQuanityChange = (action) => {
@@ -70,8 +71,36 @@ function ProductDetails() {
                 duration: 1000,
             });
             setIsButtonDisabled(false);
-        },5000);
+        }, 5000);
     }
+
+    const similarProducts = [
+        {
+            _id: 1,
+            name: 'Product 1',
+            price: 120,
+            images: [{ url: "https://picsum.photos/200?random=1", }]
+        },
+        {
+            _id: 2,
+            name: 'Product 2',
+            price: 120,
+            images: [{ url: "https://picsum.photos/200?random=2", }]
+        },
+        {
+            _id: 3,
+            name: 'Product 3',
+            price: 120,
+            images: [{ url: "https://picsum.photos/200?random=3", }]
+        },
+        {
+            _id: 1,
+            name: 'Product 4',
+            price: 120,
+            images: [{ url: "https://picsum.photos/200?random=4", }]
+        }
+    ]
+       
     
     return (
        
@@ -202,7 +231,16 @@ function ProductDetails() {
                             </table>
                         </div>
                   </div>
-              </div>
+                </div>
+
+
+                {/* You May Also Like Section */}
+                <div className="mt-20">
+                    <h2 className="text-2xl text-center font-mediuem mb-">
+                        You May Also Like
+                    </h2>
+                    <ProductGrid products={similarProducts} />
+                </div>
           </div>
       </div>
       
