@@ -32,7 +32,7 @@ function Profile() {
                             ],
                             totalPrice: 89.99,
                             isPaid: true,
-                            isDelivered: false
+                            isDelivered: false ,
                         }
                     ];
                     setOrders(mockOrders);
