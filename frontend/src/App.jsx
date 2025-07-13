@@ -7,6 +7,8 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import CollectionPage from './pages/CollectionPage';
 import Profile from './pages/profile';
+import ProductDetails from './components/Products/ProductDetails';
+import Checkout from './components/Cart/Checkout';
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +20,8 @@ function App() {
           <Route path='register' element={<Register />} />
           <Route path='profile' element={<Profile />} />
           <Route path='collections/:collection' element={<CollectionPage />} />
+          <Route path='product/:id' element={<ProductDetails />} />
+          <Route path='checkout' element={<Checkout />} />
       </Route>
       
       <Route> { /* Admin Layout*/} </Route>
