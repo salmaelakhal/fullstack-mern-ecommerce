@@ -25,7 +25,8 @@ function Navbar() {
 
     return (
         <>
-            <nav className='container mx-auto flex items-center justify-between py-4 px-6'>
+             <div className='border-b border-gray-200'>
+            <nav className=' border-b border-gray-200 bg-white container mx-auto flex items-center justify-between py-4 px-6'>
                 <div>
                     <Link to='/' className='text-2xl font-medium'>
                         MERNify
@@ -33,7 +34,7 @@ function Navbar() {
                     </Link>
                 </div>
                 <div className='hidden md:flex space-x-6'>
-                    <Link to='#' className="text-gray-700 hover:text-black text-sm font-medium uppercase">
+                    <Link to='Collections/all' className="text-gray-700 hover:text-black text-sm font-medium uppercase">
                         Men 
                     </Link>
                     <Link to='#' className="text-gray-700 hover:text-black text-sm font-medium uppercase">
@@ -69,7 +70,8 @@ function Navbar() {
                     </button>
                 </div>
 
-            </nav>
+                </nav>
+                </div>
             <CartDrawer drawerOpen={drawerOpen} toggleCartDrawer={toggleCartDrawer} />
 
             {/* Mobile Navigation */}

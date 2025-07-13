@@ -8,7 +8,7 @@ function Header() {
           {/* topbar */}
           <Topbar />
           {/* navbar  */}
-          <Navbar />
+          <Navbar/>
           {/* cart drawer */}
     </div>
   )
