@@ -63,7 +63,7 @@ function FilterSidebar() {
   }
 
 
-  const updateURLParams = (newFilters) => {
+  const updateURLParams = (newFilters) => { 
     const params = new URLSearchParams(searchParams);
     // {category: 'Top Wear', size: ['M', 'L'], 
     Object.keys(newFilters).forEach((key) => {
