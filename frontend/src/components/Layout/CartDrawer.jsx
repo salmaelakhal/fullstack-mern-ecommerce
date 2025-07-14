@@ -7,6 +7,7 @@ function CartDrawer({drawerOpen, toggleCartDrawer}) {
     const navigate = useNavigate();
     
     const handleCheckout = () => {
+        toggleCartDrawer();
         // Navigate to the checkout page
         navigate('/checkout');
        
