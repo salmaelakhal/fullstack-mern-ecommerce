@@ -13,7 +13,7 @@ function AdminLayout() {
 
 
   return (
-    <div className='min-h-screen flex flex-col ms:flex-row relative'>
+    <div className='min-h-screen flex flex-col md:flex-row relative'>
       {/* Mobile Toggle Button  */}
       <div className='flex md:hidden p-4 bg-gray-900 text-white z-20'>
         <button onClick={toggleSidebar}>
@@ -38,7 +38,7 @@ function AdminLayout() {
       </div>
 
       {/* Main Content  */}
-      <div className="flex-row p-6 overflow-auto">
+      <div className="flex-grow p-6 overflow-auto">
         <Outlet />
       </div>
     </div>
