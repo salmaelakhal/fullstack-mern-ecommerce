@@ -38,7 +38,7 @@ userSchema.pre("save", async function(next) {
     next();
 });
 
-
+ 
 // Match User entered to Hashed password
 
 userSchema.methods.matchPassword = async function(enteredPassword) {
