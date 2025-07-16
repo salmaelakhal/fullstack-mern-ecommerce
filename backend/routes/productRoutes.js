@@ -256,7 +256,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-
+//  
 // @route Get /api/products/:id
 // @desc Get a single product by Id
 // @access Public
