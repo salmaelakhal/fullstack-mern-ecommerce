@@ -32,4 +32,12 @@ const protect = async (req, res, next) => {
   }
 };
 
+
+// Middleware to check if the user is an admin
+
+
+
+
+
+
 module.exports = { protect };
