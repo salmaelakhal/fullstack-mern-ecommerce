@@ -6,7 +6,7 @@ const { protect, admin } = require("../middleware/authMiddleware");
 // @route GET /api/products
 // @desc Create a new Product
 // @access Private,  // only admin can create a new product
-router.post("/", protect, async (req, res) => {
+router.post("/", protect,admin,  async (req, res) => {
   try {
     const {
       name,
