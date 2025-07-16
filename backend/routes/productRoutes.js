@@ -128,11 +128,37 @@ router.put("/:id", protect,admin, async (req, res) => {
       }
       
 
-
-
   } catch (error) {
     console.error(error)
     res.status(500).json({ message: "Server error" });
   }
 });
+
+
+// @route Delete /api/products/:id
+// @desc Delete a Product
+// @access Private,  // only admin can delete a product
+
+router.delete("/:id", protect,admin, async (req, res) => {
+    try {
+      //Find the product by Id
+    const product = await Product.findById(req.params.id);
+        if (product) {
+        // Remove the product from DB 
+      await product.deleteOne();
+      res.json({ message: "Product removed" });
+    } else {
+      res.status(404).json({ message: "Product not found" });
+    }
+  } catch (error) {
+    console.error(error)
+        res.status(500).send("Server error");
+  }
+});
+
+
+
+
+
+
 module.exports = router;
