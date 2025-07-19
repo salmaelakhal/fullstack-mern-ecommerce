@@ -4,13 +4,13 @@ const Cart = require("../models/Cart");
 const Product = require("../models/Product");
 const Order = require("../models/Order");
 const { protect } = require("../middleware/authMiddleware");
-const route = express.Router();
+const router = express.Router();
 
 
 // @route POST /api/checkout
 // @desc Create a new Checkout
 // @access Private
-route.post('/', protect, async (req, res) => {
+router.post('/', protect, async (req, res) => {
     const { checkoutItems, shippingAddress, payementMethod, totalPrice } =
         req.body;
     
